@@ -12,12 +12,10 @@ namespace ApplicationLibrary.Models
     {   
         public static BindingList<Product> Products { get; set; } = new BindingList<Product>();
         public static BindingList<Product> ProductResults = new BindingList<Product>();
-        public static BindingList<Product> TempProduct = new BindingList<Product>();
 
         public static BindingList<Part> AllParts { get; set; } = new BindingList<Part>();
         public static BindingList<Part> PartResults = new BindingList<Part>();
 
-        //public static BindingList<Part> TempAssociatedParts = new BindingList<Part>();
 
         public static Part SelectedPart { get; set; }
         public static int SelectedPartPartID { get; set; }

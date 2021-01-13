@@ -82,7 +82,7 @@ namespace ApplicationUI
             if (string.IsNullOrEmpty(productNameValue.Text))
             { productNameValue.BackColor = System.Drawing.Color.Red; }
             else
-            { productNameValue.BackColor = System.Drawing.Color.White; name = productNameValue.Text; }
+            { productNameValue.BackColor = System.Drawing.Color.White; Inventory.SelectedProduct.Name = productNameValue.Text; }
             productSaveButton.Enabled = enableSave();
         }
 
@@ -91,7 +91,7 @@ namespace ApplicationUI
             if (string.IsNullOrEmpty(productInventoryValue.Text) || !Int32.TryParse(productInventoryValue.Text, out inStock))
             { productInventoryValue.BackColor = System.Drawing.Color.Red; }
             else
-            { productInventoryValue.BackColor = System.Drawing.Color.White; }
+            { productInventoryValue.BackColor = System.Drawing.Color.White; Inventory.SelectedProduct.InStock = inStock; }
             productSaveButton.Enabled = enableSave();
         }
 
@@ -100,7 +100,7 @@ namespace ApplicationUI
             if (string.IsNullOrEmpty(productPriceValue.Text) || !decimal.TryParse(productPriceValue.Text, out price))
             { productPriceValue.BackColor = System.Drawing.Color.Red; }
             else
-            { productPriceValue.BackColor = System.Drawing.Color.White; }
+            { productPriceValue.BackColor = System.Drawing.Color.White; Inventory.SelectedProduct.Price = price; }
             productSaveButton.Enabled = enableSave();
         }
 
@@ -109,7 +109,7 @@ namespace ApplicationUI
             if (string.IsNullOrEmpty(productMaxValue.Text) || !Int32.TryParse(productMaxValue.Text, out max))
             { productMaxValue.BackColor = System.Drawing.Color.Red; }
             else
-            { productMaxValue.BackColor = System.Drawing.Color.White; }
+            { productMaxValue.BackColor = System.Drawing.Color.White; Inventory.SelectedProduct.Max = max; }
             productSaveButton.Enabled = enableSave();
         }
 
@@ -118,7 +118,7 @@ namespace ApplicationUI
             if (string.IsNullOrEmpty(productMinValue.Text) || !Int32.TryParse(productMinValue.Text, out min))
             { productMinValue.BackColor = System.Drawing.Color.Red; }
             else
-            { productMinValue.BackColor = System.Drawing.Color.White; }
+            { productMinValue.BackColor = System.Drawing.Color.White; Inventory.SelectedProduct.Min = min; }
             productSaveButton.Enabled = enableSave();
         }
 

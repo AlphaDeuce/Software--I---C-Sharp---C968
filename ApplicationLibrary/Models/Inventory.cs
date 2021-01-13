@@ -12,9 +12,12 @@ namespace ApplicationLibrary.Models
     {   
         public static BindingList<Product> Products { get; set; } = new BindingList<Product>();
         public static BindingList<Product> ProductResults = new BindingList<Product>();
-        
+        public static BindingList<Product> TempProduct = new BindingList<Product>();
+
         public static BindingList<Part> AllParts { get; set; } = new BindingList<Part>();
         public static BindingList<Part> PartResults = new BindingList<Part>();
+
+        //public static BindingList<Part> TempAssociatedParts = new BindingList<Part>();
 
         public static Part SelectedPart { get; set; }
         public static int SelectedPartPartID { get; set; }
@@ -31,6 +34,10 @@ namespace ApplicationLibrary.Models
         
         public static bool DeletePart(Part deletePart)
         {
+            string n = deletePart.Name;
+            int prodCount = 0;
+            int i = 0;
+            
             string message = string.Format("Are you sure that you would like to delete {0}?", deletePart.Name);
             const string caption = "Confirm Delete";
             var result = MessageBox.Show(message, caption,
@@ -40,7 +47,28 @@ namespace ApplicationLibrary.Models
             
             if (result == DialogResult.Yes)
             {
-                return true;
+                foreach (Product prod in Inventory.Products)
+                {
+                    int i2 = 0;
+                    foreach (Part part in Inventory.Products[i].AssociatedParts)
+                    {
+                        if (Inventory.Products[i].AssociatedParts[i2].Name == n) { prodCount++; }
+                        i2++;
+                        
+                    }
+                    i++;
+                }
+                
+                
+                if (prodCount == 0) 
+                { 
+                    return true; 
+                } else 
+                {
+                    MessageBox.Show(string.Format("The part {0} is associated with {1} product(s) and can not be deleted.", n, prodCount));
+                    return false; 
+                }
+                
             }
             return false;
         }

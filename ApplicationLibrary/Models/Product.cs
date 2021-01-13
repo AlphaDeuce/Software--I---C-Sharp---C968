@@ -9,6 +9,7 @@ namespace ApplicationLibrary.Models
     public class Product 
     {
         public BindingList<Part> AssociatedParts { get; set; } = new BindingList<Part>();
+        
 
         public int ProductID { get; set; }
         public string Name { get; set; }

@@ -192,16 +192,11 @@ namespace ApplicationUI
 
 
             this.Close();
-            MainScreenForm m = new MainScreenForm();
-            m.Show();
-
         }
 
         private void partCancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            MainScreenForm m = new MainScreenForm();
-            m.Show();
         }
     }
 }

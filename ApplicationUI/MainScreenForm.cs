@@ -51,10 +51,15 @@ namespace ApplicationUI
         private void partsAddButton_Click(object sender, EventArgs e)
         {
             
-            PartForm addPart = new PartForm();
+            //PartForm addPart = new PartForm();
+            //this.Hide();
+            //addPart.Show();
             this.Hide();
-            addPart.Show();
-            
+            PartForm addPart = new PartForm();
+            addPart.ShowDialog();
+            addPart = null;
+            this.Show();
+
         }
 
         private void partsModifyButton_Click(object sender, EventArgs e)
@@ -62,9 +67,11 @@ namespace ApplicationUI
             if (partsGridView.DefaultCellStyle.SelectionBackColor == System.Drawing.Color.Yellow)
             {
                 partsGridView.ClearSelection();
-                PartForm modifyPart = new PartForm(Inventory.SelectedPartPartID);
                 this.Hide();
-                modifyPart.Show();
+                PartForm modifyPart = new PartForm(Inventory.SelectedPartPartID);
+                modifyPart.ShowDialog();
+                modifyPart = null;
+                this.Show();
             }
             else
             {
@@ -150,9 +157,11 @@ namespace ApplicationUI
 
         private void productAddButton_Click(object sender, EventArgs e)
         {
-            ProductForm addProduct = new ProductForm();
             this.Hide();
-            addProduct.Show();
+            ProductForm addProduct = new ProductForm();
+            addProduct.ShowDialog();
+            addProduct = null;
+            this.Show();
         }
 
         private void productModifyButton_Click(object sender, EventArgs e)
@@ -160,9 +169,11 @@ namespace ApplicationUI
             if (productsGridView.DefaultCellStyle.SelectionBackColor == System.Drawing.Color.Yellow)
             {
                 productsGridView.ClearSelection();
-                ProductForm modifyProduct = new ProductForm(Inventory.SelectedProductProductID);
                 this.Hide();
-                modifyProduct.Show();
+                ProductForm modifyProduct = new ProductForm(Inventory.SelectedProductProductID);
+                modifyProduct.ShowDialog();
+                modifyProduct = null;
+                this.Show();
             }
             else
             {

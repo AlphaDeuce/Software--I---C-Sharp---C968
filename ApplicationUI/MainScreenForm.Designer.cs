@@ -281,7 +281,7 @@ namespace ApplicationUI
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(2100, 1182);
+            this.ClientSize = new System.Drawing.Size(2064, 1175);
             this.Controls.Add(this.productsGridView);
             this.Controls.Add(this.partsGridView);
             this.Controls.Add(this.productDeleteButton);

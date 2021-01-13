@@ -19,6 +19,8 @@ namespace ApplicationUI
         int productID = Inventory.Products.Count;
         public bool updateProduct;
 
+        
+
         public ProductForm()
         {
             InitializeComponent();
@@ -70,7 +72,6 @@ namespace ApplicationUI
             associatedPartsGridView.DefaultCellStyle.SelectionForeColor = associatedPartsGridView.DefaultCellStyle.ForeColor;
             associatedPartsGridView.RowHeadersVisible = false;
             associatedPartsGridView.DataSource = Inventory.Products[Inventory.SelectedProductProductID].AssociatedParts;
-
 
             updateProduct = true;
             productSaveButton.Enabled = false;
@@ -132,6 +133,8 @@ namespace ApplicationUI
 
                 Inventory.SelectedPartPartID = (int)canidatePartsGridView.SelectedRows[0].Cells[0].Value;
                 Inventory.SelectedPart = Inventory.AllParts[Inventory.SelectedPartPartID];
+
+
             }
         }
 
@@ -186,9 +189,9 @@ namespace ApplicationUI
         {
             if (lowerIdx >= 0)
             {
-                if (Product.RemoveAssociatedPart(Inventory.Products[Inventory.SelectedProductProductID].AssociatedParts[0]))
+                if (Product.RemoveAssociatedPart(Inventory.Products[Inventory.SelectedProductProductID].AssociatedParts[lowerIdx]))
                 {
-                    Inventory.Products[Inventory.SelectedProductProductID].AssociatedParts.Remove(Inventory.Products[Inventory.SelectedProductProductID].AssociatedParts[0]);
+                    Inventory.Products[Inventory.SelectedProductProductID].AssociatedParts.Remove(Inventory.Products[Inventory.SelectedProductProductID].AssociatedParts[lowerIdx]);
                     productSaveButton.Enabled = enableSave();
                 }
             }
@@ -207,9 +210,6 @@ namespace ApplicationUI
 
                 associatedPartsGridView.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Yellow;
                 associatedPartsGridView.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-
-                Inventory.SelectedPartPartID = (int)associatedPartsGridView.SelectedRows[0].Cells[0].Value;
-                Inventory.SelectedPart = Inventory.AllParts[Inventory.SelectedPartPartID];
             }
         }
 
@@ -231,22 +231,31 @@ namespace ApplicationUI
         {
             if (updateProduct)
             {
-                Inventory.UpdateProduct(selectedIdx, Inventory.SelectedProduct);
+               Inventory.UpdateProduct(selectedIdx, Inventory.SelectedProduct);
             }
             else
             {
                 Inventory.UpdateProduct(productID, (new Product(productID, name, price, inStock, min, max)));
             }
             this.Close();
-            MainScreenForm m = new MainScreenForm();
-            m.Show();
         }
 
         private void productCancelButton_Click(object sender, EventArgs e)
         {
+            
+            if (!enableSave()) 
+            { 
+                Inventory.Products.Remove(Inventory.Products[productID]);
+                
+            }
+            else
+            {
+                //Inventory.Products[Inventory.SelectedProductProductID].TempAssociatedParts.Clear();
+            }
+
+           
+            
             this.Close();
-            MainScreenForm m = new MainScreenForm();
-            m.Show();
         }
 
 

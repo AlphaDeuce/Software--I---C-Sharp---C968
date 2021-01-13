@@ -57,7 +57,7 @@ namespace ApplicationUI
             if (Inventory.SelectedPart is Outsourced)
             {
                 Outsourced company = (Outsourced)Inventory.SelectedPart;
-                partSourceValue.Text = company.CompanyName.ToString();
+                partSourceValue.Text = company.CompanyName;
                 partOutsourcedRadioButton.Checked = true;
                 partSourceLabel.Text = "Company Name";
 
@@ -87,7 +87,7 @@ namespace ApplicationUI
             else
             {
                 partSourceValue.BackColor = System.Drawing.Color.White;
-                companyName = partSourceValue.Text;
+ 
             }
             partSaveButton.Enabled = enableSave();
         }
@@ -175,7 +175,7 @@ namespace ApplicationUI
                 }
                 else
                 {
-                    Inventory.UpdatePart(selectedIdx, (new Outsourced(selectedIdx, name, price, inStock, min, max, companyName)));
+                    Inventory.UpdatePart(selectedIdx, (new Outsourced(selectedIdx, name, price, inStock, min, max, companyName = partSourceValue.Text)));
                 }
             }
             else
@@ -186,7 +186,7 @@ namespace ApplicationUI
                 }
                 else
                 {
-                    Inventory.AddPart(new Outsourced(partID, name, price, inStock, min, max, companyName));
+                    Inventory.AddPart(new Outsourced(partID, name, price, inStock, min, max, companyName = partSourceValue.Text));
                 }
             }
 

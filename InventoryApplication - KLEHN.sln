@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationLibrary", "ApplicationLibrary\ApplicationLibrary.csproj", "{C5A0A54E-C33B-43C3-8FF6-FD6C3F34C3ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationLibrary", "ApplicationLibrary\ApplicationLibrary.csproj", "{C5A0A54E-C33B-43C3-8FF6-FD6C3F34C3ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationUI", "ApplicationUI\ApplicationUI.csproj", "{C0AD48F9-D4C7-4B3B-877C-8EE731A94350}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B411F449-28BA-48E0-9D46-5F7D194C6011}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

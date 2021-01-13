@@ -100,11 +100,19 @@ namespace ApplicationLibrary.Models
             string message = string.Format("Are you sure that you would like to delete {0}?", deleteProduct.Name);
             const string caption = "Confirm Delete";
             var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-                {
-                    return true;
-                }
+            if (result == DialogResult.Yes && !(deleteProduct.AssociatedParts.Count > 0))
+            {
+                return true;
+            }
+            if (result == DialogResult.Yes && (deleteProduct.AssociatedParts.Count > 0))
+            {
+                MessageBox.Show(string.Format("The product {0} is associated with {1} part(s) and can not be deleted.", deleteProduct.Name, deleteProduct.AssociatedParts.Count));
                 return false;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public static void LookupProduct(int idx)

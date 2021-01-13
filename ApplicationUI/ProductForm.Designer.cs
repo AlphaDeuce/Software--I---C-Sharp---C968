@@ -42,17 +42,17 @@ namespace ApplicationUI
             this.productInventoryValue = new System.Windows.Forms.TextBox();
             this.productInventoryLabel = new System.Windows.Forms.Label();
             this.headerLabel = new System.Windows.Forms.Label();
-            this.canidatePartsGridView = new System.Windows.Forms.DataGridView();
-            this.canidatePartsGridViewSearchValue = new System.Windows.Forms.TextBox();
-            this.canidatePartsSearchButton = new System.Windows.Forms.Button();
+            this.candidatePartsGridView = new System.Windows.Forms.DataGridView();
+            this.candidatePartsGridViewSearchValue = new System.Windows.Forms.TextBox();
+            this.candidatePartsSearchButton = new System.Windows.Forms.Button();
             this.partsGridViewLabel = new System.Windows.Forms.Label();
             this.associatedPartsGridView = new System.Windows.Forms.DataGridView();
             this.productsGridViewLabel = new System.Windows.Forms.Label();
-            this.canidatePartsAddButton = new System.Windows.Forms.Button();
+            this.candidatePartsAddButton = new System.Windows.Forms.Button();
             this.associatedPartsDeleteButton = new System.Windows.Forms.Button();
             this.productCancelButton = new System.Windows.Forms.Button();
             this.productSaveButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.canidatePartsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatePartsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.associatedPartsGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,46 +186,46 @@ namespace ApplicationUI
             this.headerLabel.TabIndex = 27;
             this.headerLabel.Text = "Add Product";
             // 
-            // canidatePartsGridView
+            // candidatePartsGridView
             // 
-            this.canidatePartsGridView.AllowUserToAddRows = false;
-            this.canidatePartsGridView.AllowUserToDeleteRows = false;
-            this.canidatePartsGridView.AllowUserToResizeColumns = false;
-            this.canidatePartsGridView.AllowUserToResizeRows = false;
-            this.canidatePartsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.canidatePartsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.canidatePartsGridView.Location = new System.Drawing.Point(806, 153);
-            this.canidatePartsGridView.Name = "canidatePartsGridView";
-            this.canidatePartsGridView.ReadOnly = true;
-            this.canidatePartsGridView.RowHeadersWidth = 62;
-            this.canidatePartsGridView.RowTemplate.Height = 28;
-            this.canidatePartsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.canidatePartsGridView.Size = new System.Drawing.Size(810, 230);
-            this.canidatePartsGridView.TabIndex = 15;
-            this.canidatePartsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.canidatePartsGridView_CellClick);
+            this.candidatePartsGridView.AllowUserToAddRows = false;
+            this.candidatePartsGridView.AllowUserToDeleteRows = false;
+            this.candidatePartsGridView.AllowUserToResizeColumns = false;
+            this.candidatePartsGridView.AllowUserToResizeRows = false;
+            this.candidatePartsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.candidatePartsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.candidatePartsGridView.Location = new System.Drawing.Point(806, 153);
+            this.candidatePartsGridView.Name = "candidatePartsGridView";
+            this.candidatePartsGridView.ReadOnly = true;
+            this.candidatePartsGridView.RowHeadersWidth = 62;
+            this.candidatePartsGridView.RowTemplate.Height = 28;
+            this.candidatePartsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.candidatePartsGridView.Size = new System.Drawing.Size(810, 230);
+            this.candidatePartsGridView.TabIndex = 15;
+            this.candidatePartsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.candidatePartsGridView_CellClick);
             // 
-            // canidatePartsGridViewSearchValue
+            // candidatePartsGridViewSearchValue
             // 
-            this.canidatePartsGridViewSearchValue.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.canidatePartsGridViewSearchValue.Location = new System.Drawing.Point(1218, 108);
-            this.canidatePartsGridViewSearchValue.Name = "canidatePartsGridViewSearchValue";
-            this.canidatePartsGridViewSearchValue.Size = new System.Drawing.Size(297, 34);
-            this.canidatePartsGridViewSearchValue.TabIndex = 14;
-            this.canidatePartsGridViewSearchValue.TextChanged += new System.EventHandler(this.canidatePartsGridViewSearchValue_TextChanged);
+            this.candidatePartsGridViewSearchValue.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.candidatePartsGridViewSearchValue.Location = new System.Drawing.Point(1218, 108);
+            this.candidatePartsGridViewSearchValue.Name = "candidatePartsGridViewSearchValue";
+            this.candidatePartsGridViewSearchValue.Size = new System.Drawing.Size(297, 34);
+            this.candidatePartsGridViewSearchValue.TabIndex = 14;
+            this.candidatePartsGridViewSearchValue.TextChanged += new System.EventHandler(this.candidatePartsGridViewSearchValue_TextChanged);
             // 
-            // canidatePartsSearchButton
+            // candidatePartsSearchButton
             // 
-            this.canidatePartsSearchButton.FlatAppearance.BorderSize = 5;
-            this.canidatePartsSearchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.canidatePartsSearchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.canidatePartsSearchButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.canidatePartsSearchButton.Location = new System.Drawing.Point(1521, 106);
-            this.canidatePartsSearchButton.Name = "canidatePartsSearchButton";
-            this.canidatePartsSearchButton.Size = new System.Drawing.Size(95, 39);
-            this.canidatePartsSearchButton.TabIndex = 13;
-            this.canidatePartsSearchButton.Text = "Search";
-            this.canidatePartsSearchButton.UseVisualStyleBackColor = true;
-            this.canidatePartsSearchButton.Click += new System.EventHandler(this.canidatePartsSearchButton_Click);
+            this.candidatePartsSearchButton.FlatAppearance.BorderSize = 5;
+            this.candidatePartsSearchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.candidatePartsSearchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.candidatePartsSearchButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.candidatePartsSearchButton.Location = new System.Drawing.Point(1521, 106);
+            this.candidatePartsSearchButton.Name = "candidatePartsSearchButton";
+            this.candidatePartsSearchButton.Size = new System.Drawing.Size(95, 39);
+            this.candidatePartsSearchButton.TabIndex = 13;
+            this.candidatePartsSearchButton.Text = "Search";
+            this.candidatePartsSearchButton.UseVisualStyleBackColor = true;
+            this.candidatePartsSearchButton.Click += new System.EventHandler(this.candidatePartsSearchButton_Click);
             // 
             // partsGridViewLabel
             // 
@@ -235,7 +235,7 @@ namespace ApplicationUI
             this.partsGridViewLabel.Name = "partsGridViewLabel";
             this.partsGridViewLabel.Size = new System.Drawing.Size(218, 32);
             this.partsGridViewLabel.TabIndex = 28;
-            this.partsGridViewLabel.Text = "All Canidate Parts";
+            this.partsGridViewLabel.Text = "All candidate Parts";
             // 
             // associatedPartsGridView
             // 
@@ -265,19 +265,19 @@ namespace ApplicationUI
             this.productsGridViewLabel.TabIndex = 32;
             this.productsGridViewLabel.Text = "Parts Associated with this Product";
             // 
-            // canidatePartsAddButton
+            // candidatePartsAddButton
             // 
-            this.canidatePartsAddButton.FlatAppearance.BorderSize = 5;
-            this.canidatePartsAddButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.canidatePartsAddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.canidatePartsAddButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.canidatePartsAddButton.Location = new System.Drawing.Point(1528, 389);
-            this.canidatePartsAddButton.Name = "canidatePartsAddButton";
-            this.canidatePartsAddButton.Size = new System.Drawing.Size(88, 39);
-            this.canidatePartsAddButton.TabIndex = 16;
-            this.canidatePartsAddButton.Text = "Add";
-            this.canidatePartsAddButton.UseVisualStyleBackColor = true;
-            this.canidatePartsAddButton.Click += new System.EventHandler(this.canidatePartsAddButton_Click);
+            this.candidatePartsAddButton.FlatAppearance.BorderSize = 5;
+            this.candidatePartsAddButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.candidatePartsAddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.candidatePartsAddButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.candidatePartsAddButton.Location = new System.Drawing.Point(1528, 389);
+            this.candidatePartsAddButton.Name = "candidatePartsAddButton";
+            this.candidatePartsAddButton.Size = new System.Drawing.Size(88, 39);
+            this.candidatePartsAddButton.TabIndex = 16;
+            this.candidatePartsAddButton.Text = "Add";
+            this.candidatePartsAddButton.UseVisualStyleBackColor = true;
+            this.candidatePartsAddButton.Click += new System.EventHandler(this.candidatePartsAddButton_Click);
             // 
             // associatedPartsDeleteButton
             // 
@@ -331,12 +331,12 @@ namespace ApplicationUI
             this.Controls.Add(this.productCancelButton);
             this.Controls.Add(this.productSaveButton);
             this.Controls.Add(this.associatedPartsDeleteButton);
-            this.Controls.Add(this.canidatePartsAddButton);
+            this.Controls.Add(this.candidatePartsAddButton);
             this.Controls.Add(this.associatedPartsGridView);
             this.Controls.Add(this.productsGridViewLabel);
-            this.Controls.Add(this.canidatePartsGridView);
-            this.Controls.Add(this.canidatePartsGridViewSearchValue);
-            this.Controls.Add(this.canidatePartsSearchButton);
+            this.Controls.Add(this.candidatePartsGridView);
+            this.Controls.Add(this.candidatePartsGridViewSearchValue);
+            this.Controls.Add(this.candidatePartsSearchButton);
             this.Controls.Add(this.partsGridViewLabel);
             this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.productIDValue);
@@ -354,7 +354,7 @@ namespace ApplicationUI
             this.Name = "ProductForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product";
-            ((System.ComponentModel.ISupportInitialize)(this.canidatePartsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatePartsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.associatedPartsGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -376,13 +376,13 @@ namespace ApplicationUI
         private System.Windows.Forms.TextBox productInventoryValue;
         private System.Windows.Forms.Label productInventoryLabel;
         private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.DataGridView canidatePartsGridView;
-        private System.Windows.Forms.TextBox canidatePartsGridViewSearchValue;
-        private System.Windows.Forms.Button canidatePartsSearchButton;
+        private System.Windows.Forms.DataGridView candidatePartsGridView;
+        private System.Windows.Forms.TextBox candidatePartsGridViewSearchValue;
+        private System.Windows.Forms.Button candidatePartsSearchButton;
         private System.Windows.Forms.Label partsGridViewLabel;
         private System.Windows.Forms.DataGridView associatedPartsGridView;
         private System.Windows.Forms.Label productsGridViewLabel;
-        private System.Windows.Forms.Button canidatePartsAddButton;
+        private System.Windows.Forms.Button candidatePartsAddButton;
         private System.Windows.Forms.Button associatedPartsDeleteButton;
         private System.Windows.Forms.Button productCancelButton;
         private System.Windows.Forms.Button productSaveButton;

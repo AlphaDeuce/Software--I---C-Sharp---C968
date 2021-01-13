@@ -33,10 +33,10 @@ namespace ApplicationUI
             
 
             upperIdx = -1;
-            canidatePartsGridView.DefaultCellStyle.SelectionBackColor = canidatePartsGridView.DefaultCellStyle.BackColor;
-            canidatePartsGridView.DefaultCellStyle.SelectionForeColor = canidatePartsGridView.DefaultCellStyle.ForeColor;
-            canidatePartsGridView.RowHeadersVisible = false;
-            canidatePartsGridView.DataSource = Inventory.AllParts;
+            candidatePartsGridView.DefaultCellStyle.SelectionBackColor = candidatePartsGridView.DefaultCellStyle.BackColor;
+            candidatePartsGridView.DefaultCellStyle.SelectionForeColor = candidatePartsGridView.DefaultCellStyle.ForeColor;
+            candidatePartsGridView.RowHeadersVisible = false;
+            candidatePartsGridView.DataSource = Inventory.AllParts;
 
             lowerIdx = -1;
             associatedPartsGridView.DefaultCellStyle.SelectionBackColor = associatedPartsGridView.DefaultCellStyle.BackColor;
@@ -61,10 +61,10 @@ namespace ApplicationUI
             productMinValue.Text = Inventory.SelectedProductMin.ToString();
 
             upperIdx = -1;
-            canidatePartsGridView.DefaultCellStyle.SelectionBackColor = canidatePartsGridView.DefaultCellStyle.BackColor;
-            canidatePartsGridView.DefaultCellStyle.SelectionForeColor = canidatePartsGridView.DefaultCellStyle.ForeColor;
-            canidatePartsGridView.RowHeadersVisible = false;
-            canidatePartsGridView.DataSource = Inventory.AllParts;
+            candidatePartsGridView.DefaultCellStyle.SelectionBackColor = candidatePartsGridView.DefaultCellStyle.BackColor;
+            candidatePartsGridView.DefaultCellStyle.SelectionForeColor = candidatePartsGridView.DefaultCellStyle.ForeColor;
+            candidatePartsGridView.RowHeadersVisible = false;
+            candidatePartsGridView.DataSource = Inventory.AllParts;
 
 
             lowerIdx = -1;
@@ -122,28 +122,36 @@ namespace ApplicationUI
             productSaveButton.Enabled = enableSave();
         }
 
-        private void canidatePartsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void candidatePartsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 upperIdx = e.RowIndex;
 
-                canidatePartsGridView.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Yellow;
-                canidatePartsGridView.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+                candidatePartsGridView.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Yellow;
+                candidatePartsGridView.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
 
-                Inventory.SelectedPartPartID = (int)canidatePartsGridView.SelectedRows[0].Cells[0].Value;
+                Inventory.SelectedPartPartID = (int)candidatePartsGridView.SelectedRows[0].Cells[0].Value;
                 Inventory.SelectedPart = Inventory.AllParts[Inventory.SelectedPartPartID];
 
 
             }
         }
 
-        private void canidatePartsAddButton_Click(object sender, EventArgs e)
+        private void candidatePartsAddButton_Click(object sender, EventArgs e)
         {
+            
             if (upperIdx >= 0)
             {
-                canidatePartsGridView.ClearSelection();
-                Product.AddAssociatedPart(Inventory.SelectedPart);
+                candidatePartsGridView.ClearSelection();
+                int i = 0;
+                bool exists = false;
+                foreach (Part p in Inventory.Products[Inventory.SelectedProductProductID].AssociatedParts) 
+                    { 
+                        if (Inventory.Products[Inventory.SelectedProductProductID].AssociatedParts[i].PartID == Inventory.SelectedPart.PartID) { exists = true; }
+                        i++;
+                    }
+                if (!exists) { Product.AddAssociatedPart(Inventory.SelectedPart); }
                 upperIdx = -1;
                 productSaveButton.Enabled = enableSave();
             }
@@ -153,38 +161,38 @@ namespace ApplicationUI
             }
         }
 
-        private void canidatePartsSearchButton_Click(object sender, EventArgs e)
+        private void candidatePartsSearchButton_Click(object sender, EventArgs e)
         {
             bool found = false;
             Inventory.PartResults.Clear();
-            canidatePartsGridView.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
-            canidatePartsGridView.ClearSelection();
-            if (canidatePartsGridViewSearchValue.Text != "")
+            candidatePartsGridView.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            candidatePartsGridView.ClearSelection();
+            if (candidatePartsGridViewSearchValue.Text != "")
             {
                 for (int i = 0; i < Inventory.AllParts.Count; i++)
                 {
-                    if (Inventory.AllParts[i].Name.ToUpper().Contains(canidatePartsGridViewSearchValue.Text.ToUpper()))
+                    if (Inventory.AllParts[i].Name.ToUpper().Contains(candidatePartsGridViewSearchValue.Text.ToUpper()))
                     {
                         Inventory.LookupPart(i);
                         found = true;
                     }
                 }
                 if (found)
-                    canidatePartsGridView.DataSource = Inventory.PartResults;
+                    candidatePartsGridView.DataSource = Inventory.PartResults;
                 if (!found)
                 {
-                    MessageBox.Show(string.Format("{0} was not located", canidatePartsGridViewSearchValue.Text));
+                    MessageBox.Show(string.Format("{0} was not located", candidatePartsGridViewSearchValue.Text));
                 }
             }
-            if (canidatePartsGridViewSearchValue.Text == "")
+            if (candidatePartsGridViewSearchValue.Text == "")
             {
                 MessageBox.Show("Please enter a part name to search for.");
             }
         }
 
-        private void canidatePartsGridViewSearchValue_TextChanged(object sender, EventArgs e)
+        private void candidatePartsGridViewSearchValue_TextChanged(object sender, EventArgs e)
         {
-            if (canidatePartsGridViewSearchValue.Text == "") { canidatePartsGridView.DataSource = Inventory.AllParts; }
+            if (candidatePartsGridViewSearchValue.Text == "") { candidatePartsGridView.DataSource = Inventory.AllParts; }
         }
 
         private void associatedPartsDeleteButton_Click(object sender, EventArgs e)

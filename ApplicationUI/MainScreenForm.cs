@@ -67,6 +67,7 @@ namespace ApplicationUI
             if (partsGridView.DefaultCellStyle.SelectionBackColor == System.Drawing.Color.Yellow)
             {
                 partsGridView.ClearSelection();
+                partsGridView.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
                 this.Hide();
                 PartForm modifyPart = new PartForm(Inventory.SelectedPartPartID);
                 modifyPart.ShowDialog();
@@ -106,6 +107,8 @@ namespace ApplicationUI
         {
             bool found = false;
             Inventory.PartResults.Clear();
+            partsGridView.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            partsGridView.ClearSelection();
             if (partsSearchValue.Text != "")
             {
                 for (int i = 0; i < Inventory.AllParts.Count; i++)
@@ -132,6 +135,8 @@ namespace ApplicationUI
         private void partsSearchValue_TextChanged(object sender, EventArgs e)
         {
             if (partsSearchValue.Text == "") { partsGridView.DataSource = Inventory.AllParts; }
+            partsGridView.ClearSelection();
+            partsGridView.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
         }
 
         /// 
@@ -169,6 +174,7 @@ namespace ApplicationUI
             if (productsGridView.DefaultCellStyle.SelectionBackColor == System.Drawing.Color.Yellow)
             {
                 productsGridView.ClearSelection();
+                productsGridView.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
                 this.Hide();
                 ProductForm modifyProduct = new ProductForm(Inventory.SelectedProductProductID);
                 modifyProduct.ShowDialog();
@@ -207,6 +213,8 @@ namespace ApplicationUI
         {
             bool found = false;
             Inventory.ProductResults.Clear();
+            productsGridView.ClearSelection();
+            productsGridView.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             if (productsSearchValue.Text != "")
             {
                 for (int i = 0; i < Inventory.Products.Count; i++)
@@ -233,6 +241,8 @@ namespace ApplicationUI
         private void productsSearchValue_TextChanged(object sender, EventArgs e)
         {
             if (productsSearchValue.Text == "") { productsGridView.DataSource = Inventory.Products; }
+            productsGridView.ClearSelection();
+            productsGridView.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
         }
 
         private void exitApplicationButton_Click(object sender, EventArgs e)

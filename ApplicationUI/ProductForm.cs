@@ -157,6 +157,8 @@ namespace ApplicationUI
         {
             bool found = false;
             Inventory.PartResults.Clear();
+            canidatePartsGridView.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            canidatePartsGridView.ClearSelection();
             if (canidatePartsGridViewSearchValue.Text != "")
             {
                 for (int i = 0; i < Inventory.AllParts.Count; i++)

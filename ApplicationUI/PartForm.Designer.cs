@@ -278,6 +278,7 @@ namespace ApplicationUI
             this.Controls.Add(this.partInventoryLabel);
             this.Controls.Add(this.headerLabel);
             this.Name = "PartForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Part";
             this.ResumeLayout(false);
             this.PerformLayout();

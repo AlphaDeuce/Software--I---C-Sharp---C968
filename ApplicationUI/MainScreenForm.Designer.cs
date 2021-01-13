@@ -29,7 +29,6 @@ namespace ApplicationUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.headerLabel = new System.Windows.Forms.Label();
             this.partsLabel = new System.Windows.Forms.Label();
             this.partsSearchButton = new System.Windows.Forms.Button();
@@ -45,21 +44,9 @@ namespace ApplicationUI
             this.productsSearchButton = new System.Windows.Forms.Button();
             this.productLabel = new System.Windows.Forms.Label();
             this.partsGridView = new System.Windows.Forms.DataGridView();
-            this.aPartModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsGridView = new System.Windows.Forms.DataGridView();
-            this.aPartModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.aPartModelBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.outsourcedModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aPartModelBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.inHouseModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.partsGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aPartModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aPartModelBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aPartModelBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.outsourcedModelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aPartModelBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inHouseModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -76,7 +63,7 @@ namespace ApplicationUI
             // 
             this.partsLabel.AutoSize = true;
             this.partsLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.partsLabel.Location = new System.Drawing.Point(105, 200);
+            this.partsLabel.Location = new System.Drawing.Point(78, 193);
             this.partsLabel.Name = "partsLabel";
             this.partsLabel.Size = new System.Drawing.Size(73, 32);
             this.partsLabel.TabIndex = 2;
@@ -88,10 +75,10 @@ namespace ApplicationUI
             this.partsSearchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.partsSearchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.partsSearchButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.partsSearchButton.Location = new System.Drawing.Point(521, 193);
+            this.partsSearchButton.Location = new System.Drawing.Point(640, 193);
             this.partsSearchButton.Name = "partsSearchButton";
             this.partsSearchButton.Size = new System.Drawing.Size(90, 34);
-            this.partsSearchButton.TabIndex = 3;
+            this.partsSearchButton.TabIndex = 4;
             this.partsSearchButton.Text = "Search";
             this.partsSearchButton.UseVisualStyleBackColor = true;
             this.partsSearchButton.Click += new System.EventHandler(this.partsSearchButton_Click);
@@ -99,10 +86,10 @@ namespace ApplicationUI
             // partsSearchValue
             // 
             this.partsSearchValue.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.partsSearchValue.Location = new System.Drawing.Point(630, 193);
+            this.partsSearchValue.Location = new System.Drawing.Point(337, 193);
             this.partsSearchValue.Name = "partsSearchValue";
             this.partsSearchValue.Size = new System.Drawing.Size(297, 34);
-            this.partsSearchValue.TabIndex = 4;
+            this.partsSearchValue.TabIndex = 3;
             this.partsSearchValue.TextChanged += new System.EventHandler(this.partsSearchValue_TextChanged);
             // 
             // partsAddButton
@@ -111,7 +98,7 @@ namespace ApplicationUI
             this.partsAddButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.partsAddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.partsAddButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.partsAddButton.Location = new System.Drawing.Point(550, 801);
+            this.partsAddButton.Location = new System.Drawing.Point(456, 607);
             this.partsAddButton.Name = "partsAddButton";
             this.partsAddButton.Size = new System.Drawing.Size(88, 39);
             this.partsAddButton.TabIndex = 5;
@@ -125,7 +112,7 @@ namespace ApplicationUI
             this.partsModifyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.partsModifyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.partsModifyButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.partsModifyButton.Location = new System.Drawing.Point(661, 801);
+            this.partsModifyButton.Location = new System.Drawing.Point(550, 607);
             this.partsModifyButton.Name = "partsModifyButton";
             this.partsModifyButton.Size = new System.Drawing.Size(88, 39);
             this.partsModifyButton.TabIndex = 6;
@@ -139,7 +126,7 @@ namespace ApplicationUI
             this.partsDeleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.partsDeleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.partsDeleteButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.partsDeleteButton.Location = new System.Drawing.Point(765, 801);
+            this.partsDeleteButton.Location = new System.Drawing.Point(642, 607);
             this.partsDeleteButton.Name = "partsDeleteButton";
             this.partsDeleteButton.Size = new System.Drawing.Size(88, 39);
             this.partsDeleteButton.TabIndex = 7;
@@ -153,7 +140,7 @@ namespace ApplicationUI
             this.exitApplicationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.exitApplicationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.exitApplicationButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitApplicationButton.Location = new System.Drawing.Point(1942, 1107);
+            this.exitApplicationButton.Location = new System.Drawing.Point(1417, 841);
             this.exitApplicationButton.Name = "exitApplicationButton";
             this.exitApplicationButton.Size = new System.Drawing.Size(88, 39);
             this.exitApplicationButton.TabIndex = 8;
@@ -167,7 +154,7 @@ namespace ApplicationUI
             this.productDeleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.productDeleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.productDeleteButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productDeleteButton.Location = new System.Drawing.Point(1817, 801);
+            this.productDeleteButton.Location = new System.Drawing.Point(1511, 607);
             this.productDeleteButton.Name = "productDeleteButton";
             this.productDeleteButton.Size = new System.Drawing.Size(88, 39);
             this.productDeleteButton.TabIndex = 15;
@@ -181,7 +168,7 @@ namespace ApplicationUI
             this.productModifyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.productModifyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.productModifyButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productModifyButton.Location = new System.Drawing.Point(1713, 801);
+            this.productModifyButton.Location = new System.Drawing.Point(1417, 607);
             this.productModifyButton.Name = "productModifyButton";
             this.productModifyButton.Size = new System.Drawing.Size(88, 39);
             this.productModifyButton.TabIndex = 14;
@@ -195,7 +182,7 @@ namespace ApplicationUI
             this.productAddButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.productAddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.productAddButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productAddButton.Location = new System.Drawing.Point(1602, 801);
+            this.productAddButton.Location = new System.Drawing.Point(1323, 607);
             this.productAddButton.Name = "productAddButton";
             this.productAddButton.Size = new System.Drawing.Size(88, 39);
             this.productAddButton.TabIndex = 13;
@@ -206,10 +193,10 @@ namespace ApplicationUI
             // productsSearchValue
             // 
             this.productsSearchValue.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productsSearchValue.Location = new System.Drawing.Point(1682, 193);
+            this.productsSearchValue.Location = new System.Drawing.Point(1213, 193);
             this.productsSearchValue.Name = "productsSearchValue";
             this.productsSearchValue.Size = new System.Drawing.Size(297, 34);
-            this.productsSearchValue.TabIndex = 12;
+            this.productsSearchValue.TabIndex = 11;
             this.productsSearchValue.TextChanged += new System.EventHandler(this.productsSearchValue_TextChanged);
             // 
             // productsSearchButton
@@ -218,10 +205,10 @@ namespace ApplicationUI
             this.productsSearchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.productsSearchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.productsSearchButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productsSearchButton.Location = new System.Drawing.Point(1577, 193);
+            this.productsSearchButton.Location = new System.Drawing.Point(1516, 193);
             this.productsSearchButton.Name = "productsSearchButton";
             this.productsSearchButton.Size = new System.Drawing.Size(83, 34);
-            this.productsSearchButton.TabIndex = 11;
+            this.productsSearchButton.TabIndex = 12;
             this.productsSearchButton.Text = "Search";
             this.productsSearchButton.UseVisualStyleBackColor = true;
             this.productsSearchButton.Click += new System.EventHandler(this.productsSearchButton_Click);
@@ -230,7 +217,7 @@ namespace ApplicationUI
             // 
             this.productLabel.AutoSize = true;
             this.productLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productLabel.Location = new System.Drawing.Point(1157, 200);
+            this.productLabel.Location = new System.Drawing.Point(934, 193);
             this.productLabel.Name = "productLabel";
             this.productLabel.Size = new System.Drawing.Size(117, 32);
             this.productLabel.TabIndex = 10;
@@ -244,14 +231,14 @@ namespace ApplicationUI
             this.partsGridView.AllowUserToResizeRows = false;
             this.partsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.partsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.partsGridView.Location = new System.Drawing.Point(121, 240);
+            this.partsGridView.Location = new System.Drawing.Point(71, 240);
             this.partsGridView.MultiSelect = false;
             this.partsGridView.Name = "partsGridView";
             this.partsGridView.ReadOnly = true;
             this.partsGridView.RowHeadersWidth = 62;
             this.partsGridView.RowTemplate.Height = 28;
             this.partsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.partsGridView.Size = new System.Drawing.Size(806, 542);
+            this.partsGridView.Size = new System.Drawing.Size(659, 361);
             this.partsGridView.TabIndex = 16;
             this.partsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.partsGridView_CellClick);
             // 
@@ -263,25 +250,23 @@ namespace ApplicationUI
             this.productsGridView.AllowUserToResizeRows = false;
             this.productsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.productsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsGridView.Location = new System.Drawing.Point(1169, 240);
+            this.productsGridView.Location = new System.Drawing.Point(940, 240);
             this.productsGridView.MultiSelect = false;
             this.productsGridView.Name = "productsGridView";
             this.productsGridView.ReadOnly = true;
             this.productsGridView.RowHeadersWidth = 62;
             this.productsGridView.RowTemplate.Height = 28;
             this.productsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.productsGridView.Size = new System.Drawing.Size(810, 542);
+            this.productsGridView.Size = new System.Drawing.Size(659, 361);
             this.productsGridView.TabIndex = 17;
             this.productsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsGridView_CellClick);
             // 
             // MainScreenForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(2064, 1175);
+            this.ClientSize = new System.Drawing.Size(1728, 974);
             this.Controls.Add(this.productsGridView);
             this.Controls.Add(this.partsGridView);
             this.Controls.Add(this.productDeleteButton);
@@ -301,15 +286,10 @@ namespace ApplicationUI
             this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "MainScreenForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Screen";
             ((System.ComponentModel.ISupportInitialize)(this.partsGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aPartModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aPartModelBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aPartModelBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.outsourcedModelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aPartModelBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inHouseModelBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,11 +313,5 @@ namespace ApplicationUI
         private System.Windows.Forms.Label productLabel;
         private System.Windows.Forms.DataGridView partsGridView;
         private System.Windows.Forms.DataGridView productsGridView;
-        private System.Windows.Forms.BindingSource aPartModelBindingSource;
-        private System.Windows.Forms.BindingSource aPartModelBindingSource1;
-        private System.Windows.Forms.BindingSource aPartModelBindingSource2;
-        private System.Windows.Forms.BindingSource inHouseModelBindingSource;
-        private System.Windows.Forms.BindingSource outsourcedModelBindingSource;
-        private System.Windows.Forms.BindingSource aPartModelBindingSource3;
     }
 }
